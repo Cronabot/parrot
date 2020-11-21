@@ -12,7 +12,11 @@ const GenerateLink: FC<Props> = ({}) => {
 
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
-        //TODO: Add link to database
+        
+        let { id, message } = await(
+            await fetch(`/api/genLink?title=${title}&description=${description}&image=${image}`)
+        ).json();
+
         setTitle('');
         setDescription('');
         setImage('');
