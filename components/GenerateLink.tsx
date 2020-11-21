@@ -12,8 +12,10 @@ const GenerateLink: FC<Props> = ({}) => {
 
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
-        
-        let { id, message } = await(
+
+        setGeneratedLink('Generating Link...');
+
+        let { id, message } = await (
             await fetch(`/api/genLink?title=${title}&description=${description}&image=${image}`)
         ).json();
 
@@ -43,6 +45,7 @@ const GenerateLink: FC<Props> = ({}) => {
                     Submit
                 </Button>
             </Form>
+            <h3>{generatedLink}</h3>
         </div>
     );
 };
