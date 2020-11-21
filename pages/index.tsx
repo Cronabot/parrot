@@ -1,5 +1,7 @@
 import React, { FC } from 'react';
 import Head from 'next/head';
+import GenerateLink from '../components/GenerateLink';
+import { Container } from 'react-bootstrap';
 
 interface Props {
     title: string | undefined;
@@ -13,6 +15,9 @@ const index: FC<Props> = () => {
             <Head>
                 <title>Parrot</title>
             </Head>
+            <Container>
+                <GenerateLink />
+            </Container>
         </div>
     );
 };
