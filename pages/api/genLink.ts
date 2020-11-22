@@ -3,6 +3,7 @@ import fire from '../../config/fire-config';
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     const { title, description, image } = req.query;
+    console.log('requested');
     const doc = await fire.firestore().collection('links').add({
         title: title,
         description: description,

@@ -28,18 +28,33 @@ const GenerateLink: FC<Props> = ({}) => {
     return (
         <div>
             <h1>Create Link</h1>
-            <Form>
+            <Form onSubmit={handleSubmit}>
                 <Form.Group>
                     <Form.Label>Title</Form.Label>
-                    <Form.Control type='text' placeholder='Title' />
+                    <Form.Control
+                        value={title}
+                        onChange={({ target }) => setTitle(target.value)}
+                        type='text'
+                        placeholder='Title'
+                    />
                 </Form.Group>
                 <Form.Group>
                     <Form.Label>Description</Form.Label>
-                    <Form.Control type='text' placeholder='Description' />
+                    <Form.Control
+                        value={description}
+                        onChange={({ target }) => setDescription(target.value)}
+                        type='text'
+                        placeholder='Description'
+                    />
                 </Form.Group>
                 <Form.Group>
                     <Form.Label>Image URL</Form.Label>
-                    <Form.Control type='text' placeholder='Image' />
+                    <Form.Control
+                        value={image}
+                        onChange={({ target }) => setImage(target.value)}
+                        type='text'
+                        placeholder='Image'
+                    />
                 </Form.Group>
                 <Button variant='dark' type='submit'>
                     Submit
