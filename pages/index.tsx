@@ -11,11 +11,11 @@ interface Props {
 
 const index: FC<Props> = () => {
     return (
-        <div>
+        <div style={{ minHeight: '100vh', backgroundColor: '#343A40' }}>
             <Head>
                 <title>Parrot</title>
             </Head>
-            <Container>
+            <Container style={{ paddingTop: '20vh' }}>
                 <GenerateLink />
             </Container>
         </div>
