@@ -27,10 +27,10 @@ const GenerateLink: FC<Props> = ({}) => {
 
     return (
         <div>
-            <h1>Create Link</h1>
+            <h1 style={{ color: 'white' }}>Create Link</h1>
             <Form onSubmit={handleSubmit}>
                 <Form.Group>
-                    <Form.Label>Title</Form.Label>
+                    <Form.Label style={{ color: 'white' }}>Title</Form.Label>
                     <Form.Control
                         value={title}
                         onChange={({ target }) => setTitle(target.value)}
@@ -39,7 +39,7 @@ const GenerateLink: FC<Props> = ({}) => {
                     />
                 </Form.Group>
                 <Form.Group>
-                    <Form.Label>Description</Form.Label>
+                    <Form.Label style={{ color: 'white' }}>Description</Form.Label>
                     <Form.Control
                         value={description}
                         onChange={({ target }) => setDescription(target.value)}
@@ -48,7 +48,7 @@ const GenerateLink: FC<Props> = ({}) => {
                     />
                 </Form.Group>
                 <Form.Group>
-                    <Form.Label>Image URL</Form.Label>
+                    <Form.Label style={{ color: 'white' }}>Image URL</Form.Label>
                     <Form.Control
                         value={image}
                         onChange={({ target }) => setImage(target.value)}
@@ -56,7 +56,7 @@ const GenerateLink: FC<Props> = ({}) => {
                         placeholder='Image'
                     />
                 </Form.Group>
-                <Button variant='dark' type='submit'>
+                <Button variant='light' type='submit'>
                     Submit
                 </Button>
             </Form>
