@@ -22,7 +22,7 @@ const GenerateLink: FC<Props> = ({}) => {
         setTitle('');
         setDescription('');
         setImage('');
-        setGeneratedLink(`https://parrot-1.herokuapp.com/links/${id}`);
+        setGeneratedLink(`https://parrot-links.herokuapp.com/links/${id}`);
     };
 
     return (
